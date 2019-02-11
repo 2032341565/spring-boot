@@ -41,6 +41,7 @@ test {
 	}
 }
 
+/*
 javadoc {
 	options {
 		author()
@@ -52,18 +53,21 @@ javadoc {
 	}
 	title = "${project.description} $version API"
 }
+*/
 
 task sourcesJar(type: Jar) {
 	classifier = 'sources'
 	from sourceSets.main.allSource
 }
 
+/*
 task javadocJar(type: Jar) {
 	classifier = "javadoc"
 	from javadoc
 }
+*/
 
 artifacts {
 	archives sourcesJar
-	archives javadocJar
+//	archives javadocJar
 }
